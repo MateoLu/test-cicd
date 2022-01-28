@@ -14,4 +14,5 @@ export default defineConfig({
   build: {
     outDir: "./cicd",
   },
+  publicDir: "cicd",
 });

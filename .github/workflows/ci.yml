@@ -22,12 +22,7 @@ jobs:
       with:
         host: ${{ secrets.W_HOST }}
         user: ${{ secrets.W_USER }}
-        pass: ${{ secrets.W_PASS }}
+        pass: ${{ secrets.W_PASSWORD }}
         connect_timeout: 10s
-        first_ssh: |
-          rm -rf /home/webserver/static/jenkins/cicd
-        scp: |
-          './cicd' => /home/webserver/static/jenkins
-        last_ssh: |
-          cd /home/webserver/static/jenkins
-          ls
+        local: './cicd/*'
+        remote: /home/webserver/static/jenkins/cicd

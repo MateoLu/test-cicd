@@ -24,5 +24,10 @@ jobs:
         user: ${{ secrets.W_USER }}
         pass: ${{ secrets.W_PASSWORD }}
         connect_timeout: 10s
-        local: './cicd/*'
-        remote: /home/webserver/static/jenkins/cicd
+        first_ssh: |
+          rm -rf /home/webserver/static/jenkins/cicd
+          mkdir -p /home/webserver/static/jenkins/cicd
+        scp: |
+          './cicd/*' => /home/webserver/static/jenkins/cicd/
+        # local: './cicd/*'
+        # remote: /home/webserver/static/jenkins/cicd

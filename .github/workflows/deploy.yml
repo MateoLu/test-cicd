@@ -29,5 +29,3 @@ jobs:
           mkdir -p /home/webserver/static/jenkins/cicd
         scp: |
           './cicd/*' => /home/webserver/static/jenkins/cicd/
-        # local: './cicd/*'
-        # remote: /home/webserver/static/jenkins/cicd

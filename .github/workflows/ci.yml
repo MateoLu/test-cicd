@@ -30,4 +30,3 @@ jobs:
            './cicd' => /home/webserver/static/jenkins
          last_ssh: |
             cd /home/webserver/static/jenkins
-            ls

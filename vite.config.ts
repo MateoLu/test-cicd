@@ -12,7 +12,14 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "./cicd",
+    outDir: "cicd",
+    terserOptions: {
+      compress: {
+        // 生产环境时移除console
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
-  publicDir: "cicd",
+  base: "/cicd/",
 });
